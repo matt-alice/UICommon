@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>public example</title>
+    <link href="css/ui-public.css" rel="stylesheet" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/ui-public.js"></script>
+</head>
+
+<body>
+
+<div id="msg-success"></div>
+
+<div id="msg-warning"></div>
+
+<div id="msg-error"></div>
+
+
+<span class="ajax-response loading">class "ajax-response loading"</span>
+<br />
+<br />
+<span class="ajax-response error">class "ajax-response error"</span>
+<br />
+<br />
+<span class="ajax-response warning">class "ajax-response warning"</span>
+<br />
+<br />
+<span class="ajax-response success">class "ajax-response success"</span>
+<br />
+<br />
+<button class="yellow-btn">Button class "yellow-btn"</button>        
+
+<script type="text/javascript">
+    $('#msg-success').displayMsg({
+        msgType  : 'success',
+        msgTitle : 'Congratulations!!'
+    });
+    $('#msg-warning').displayMsg({
+        msgType  : 'warning',
+        msgTitle : 'Heads up!!'
+    });
+    $('#msg-error').displayMsg({
+        msgType  : 'error',
+        msgTitle : 'Error!!'
+    });
+</script>
+
+</body>
+</html>

@@ -41,12 +41,14 @@
             custom.msgType = 'success';
         }
 
-        this.html('<div class="message-box message-box-wrapper-' + custom.msgType + '"> \
+        return this.each(function() {
+            $(this).html('<div class="message-box message-box-wrapper-' + custom.msgType + '"> \
                     <div class="message-box-logo-' + custom.msgType + '"></div> \
                     <div class="message-box-inner-' + custom.msgType + '"> \
                         <b>'  + custom.msgTitle   + '</b> \
                         <br>' + custom.msgContent + '  \
                     </div> \
-                </div>');
+                </div>')
+        });
     }   
 })(jQuery);

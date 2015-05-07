@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>public example</title>
-    <link href="css/ui-public.css" rel="stylesheet" type="text/css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/ui-public.js"></script>
+    <title>ORK10Dev - UICommon</title>
+    <link href="/ork10dev/UICommon/css/ui-public.css" rel="stylesheet" type="text/css" />
+    <script src="https://internal-cdn.amazon.com/btk.amazon.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="/ork10dev/UICommon/js/ui-public.js"></script>
+    
+    <style>
+        pre {
+            background-color: #ffffcc;
+        }
+    </style>
 </head>
 
 <body>
 
-<div id="msg-success"></div>
 
-<div id="msg-warning"></div>
+<div id="message-success"></div>
+<div id="message-warning"></div>
+<div id="message-error"></div>
 
-<div id="msg-error"></div>
+
+<p>You can reuse the above UI widgets very easily with our custom <a href="http://ork10dev.amazon.com/ork10dev/UICommon/js/ui-public.js">.displayMsg() function</a>.  </p>
+
+<pre>
+    < link href="/ork10dev/UICommon/css/ui-public.css" rel="stylesheet" type="text/css" / >
+    < script src="https://internal-cdn.amazon.com/btk.amazon.com/ajax/libs/jquery/1.5.2/jquery.min.js" >< /script >
+    < script src="/ork10dev/UICommon/js/ui-public.js">< /script >
+    
+    < script >
+        $('#message-success').displayMsg({
+            msgType: 'success',
+            msgTitle: 'Congratulations!'
+        });
+
+        $('#message-warning').displayMsg({
+            msgType: 'warning',
+            msgTitle: 'Heads up!!'
+        });
+
+        $('#message-error').displayMsg({
+            msgType: 'error',
+            msgTitle: 'Error!'
+        });
+    < /script >
+</pre>
 
 
 <span class="ajax-response loading">class "ajax-response loading"</span>
@@ -30,20 +61,26 @@
 <br />
 <button class="yellow-btn">Button class "yellow-btn"</button>        
 
+
 <script type="text/javascript">
-    $('#msg-success').displayMsg({
-        msgType  : 'success',
-        msgTitle : 'Congratulations!!'
-    });
-    $('#msg-warning').displayMsg({
-        msgType  : 'warning',
-        msgTitle : 'Heads up!!'
-    });
-    $('#msg-error').displayMsg({
-        msgType  : 'error',
-        msgTitle : 'Error!!'
-    });
+
+$('#message-success').displayMsg({
+    msgType: 'success',
+    msgTitle: 'Congratulations!'
+});
+
+$('#message-warning').displayMsg({
+    msgType: 'warning',
+    msgTitle: 'Heads up!!'
+});
+
+$('#message-error').displayMsg({
+    msgType: 'error',
+    msgTitle: 'Error!'
+});
+
 </script>
+
 
 </body>
 </html>

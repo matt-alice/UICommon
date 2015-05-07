@@ -10,18 +10,18 @@
    
     Initialization:
         $('#uniqueSelectorOnPage').displayMsg({
-            msgType  : 'success',
-            msgTitle : 'Heads up!!' ,
-            ...
-        })
+            msgType   : 'success',
+            msgTitle  : 'Heads up!!' ,
+            msgContent: 'Lorem ipsum...'
+        });
 
     Params: you can provide the following options
-        @msgType 
+        @msgType {string} (default success)
             Select one the 3 following options: success, warning or error
             If none is provided, or if the one provided upon initialization is not n this array, the msgType will default to "success"
-        @msgTitle
+        @msgTitle {string} (default success)
             String of text or html to put in title of the displayMsg widget
-        @msgContent
+        @msgContent {string} (default Lorem ipsum...)
             String of text or html to put in contents of the displayMsg widget
          ?? @msgContentUrl -- coming soon ??   
             Location of remote AJAX displayMsg widget content
